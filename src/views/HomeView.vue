@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
 import Map from "@/components/map/Map.vue";
 
 // import { onMounted } from 'vue'
