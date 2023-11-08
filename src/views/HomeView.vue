@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import TheWelcome from '../components/TheWelcome.vue'
+import Map from "@/components/map/Map.vue";
+
 // import { onMounted } from 'vue'
 
 // import { injectStrict } from '@/utils/injectTyped'
@@ -16,6 +18,10 @@ import TheWelcome from '../components/TheWelcome.vue'
 
 <template>
   <main>
-    <TheWelcome />
+    <aside>
+
+    </aside>
+
+    <Map/>
   </main>
 </template>
