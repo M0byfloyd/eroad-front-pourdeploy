@@ -1,26 +1,21 @@
 <script setup lang="ts">
 import Map from "@/components/map/Map.vue";
+import { useSuperChargerStore } from "@/stores/supercharger";
+import { useUserStore } from "@/stores/user";
+import { watch } from "vue";
 
-// import { onMounted } from 'vue'
+const superchargerStore = useSuperChargerStore();
+const userStore = useUserStore();
 
-// import { injectStrict } from '@/utils/injectTyped'
-// import { AxiosKey } from '@/conf/axios'
-
-// const axios = injectStrict(AxiosKey)
-
-// onMounted(async () => {
-//   const { data } = await axios.get('/supercharger')
-//   console.log(data)
-// })
+watch(() => userStore.userPosition, () => {
+  superchargerStore.getSuperchargerNearestUser();
+  console.log(superchargerStore.nearest)
+})
 
 </script>
 
 <template>
   <main>
-    <aside>
-
-    </aside>
-
     <Map/>
   </main>
 </template>
