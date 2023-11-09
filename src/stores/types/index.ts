@@ -1,0 +1,39 @@
+
+export type Supercharger = {
+    id: number;
+    nomAmenageur: string;
+    sirenAmenageur: string;
+    contactAmenageur: string;
+    nOperateur: string;
+    contactOperateur: string;
+    telephoneOperateur: string;
+    nomEnseigne: string;
+    nomStation: string;
+    adresseStation: string;
+    codeInseeCommune: string;
+    coordonneesXY: string;
+    nbrePdc: number;
+    puissanceNominale: number;
+    isPriseTypeEf: boolean;
+    isPriseType2: boolean;
+    isPriseTypeComboCcs: boolean;
+    isPriseTypeChademo: boolean;
+    isPriseTypeAutre: boolean;
+    typePrise: string;
+    isGratuit: boolean;
+    isPaiementActe: boolean;
+    isPaiementCB: boolean;
+    isPaiementAutre: boolean;
+    tarification: string;
+    conditionAcces: string;
+    isReservation: boolean;
+    horaires: string;
+    accessibilitePmr: string;
+    restrictionGabarit: string;
+    isStationDeuxRoues: boolean;
+    raccordement: string;
+    numPdl: string;
+    dateMiseEnService: string;
+    observation: string;
+    dateMaj: string;
+}

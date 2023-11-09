@@ -1,40 +1,69 @@
 <script setup lang="ts">
-import {RouterLink, RouterView} from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import Map from "@/components/map/Map.vue"
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
-    <div>
-      <h1>E-ROAD</h1>
-      <p>- Jack, don't you come back ?</p>
-      <p>- No more.</p>
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+  <div id="wrapper">
+    <div id="left">
+      <header>
+        <h1>E-ROAD</h1>
+        <nav>
+          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/about">About</RouterLink>
+        </nav>
+      </header>
+      <div id="content">
+        <RouterView />
+      </div>
     </div>
-  </header>
 
-  <RouterView/>
+    <div id="right">
+      <Map />
+    </div>
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+#wrapper {
+  display: flex;
+  height: 100vh;
+  align-items: center;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+#left {
+  flex: 1;
+  padding: 1rem 0rem 1rem 1rem;
+  background-color: var(--color-background);
+  height: 100vh;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#content {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+}
+
+#right {
+  flex: 1;
+  background-color: var(--color-background);
+  padding: 1rem;
+}
+
+header {
+  max-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 nav {
-  width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
@@ -53,32 +82,5 @@ nav a {
 
 nav a:first-of-type {
   border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
 }
 </style>

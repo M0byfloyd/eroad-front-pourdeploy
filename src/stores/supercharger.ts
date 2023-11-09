@@ -3,11 +3,12 @@ import { injectStrict } from '@/utils/injectTyped'
 import { AxiosKey } from '@/conf/axios'
 import { useUserStore } from './user'
 import { ref } from 'vue'
+import type { Supercharger } from './types'
 
 export const useSuperChargerStore = defineStore('superchargeur', () => {
     const axios = injectStrict(AxiosKey)
 
-    const nearest = ref([])
+    const nearest = ref<Supercharger[]>([])
 
     async function getSuperchargers() {
         let superchargers = [];
@@ -19,7 +20,6 @@ export const useSuperChargerStore = defineStore('superchargeur', () => {
 
     const getSuperchargerNearestUser = async () => {
         const userPosition = useUserStore().userPosition
-        console.log(userPosition)
         // get les superchargeurs les plus proches de l'utilisateur
         const { data } = await axios.get(`/supercharger/nearest/${userPosition[0]}/${userPosition[1]}`)
         if (data) {

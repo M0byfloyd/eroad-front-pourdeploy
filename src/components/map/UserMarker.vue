@@ -1,25 +1,5 @@
 <script setup lang="ts">
-
-import {LIcon, LMarker} from "@vue-leaflet/vue-leaflet";
-import {ref} from "vue";
-
-let userPosition = ref([0, 0]);
-
-function success(position) {
-  console.log(position)
-  userPosition.value = [position.coords.latitude, position.coords.longitude];
-}
-
-function error() {
-  console.log("Sorry, no position available.");
-}
-
-const options = {
-  enableHighAccuracy: true,
-  timeout: 5000
-};
-
-navigator.geolocation.watchPosition(success, error, options);
+import { LIcon, LMarker } from "@vue-leaflet/vue-leaflet";
 
 defineProps({
   userPosition: Array

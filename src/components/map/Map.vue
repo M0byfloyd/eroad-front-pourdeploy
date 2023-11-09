@@ -1,5 +1,5 @@
 <template>
-  <div style="height:600px; width:800px">
+  <div style="height:95vh; width:65vw">
     <l-map :use-global-leaflet="false" ref="map" :zoom="12" :center="userStore.userPosition">
       <UserMarker :user-position="userStore.userPosition" />
 
