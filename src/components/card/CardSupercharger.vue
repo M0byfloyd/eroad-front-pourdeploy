@@ -18,9 +18,9 @@ onMounted(() => {
       <img src="/src/assets/pinktesla.png" alt="pink tesla logo">
       <h2>{{ supercharger?.nomEnseigne }}</h2>
     </div>
-    <p>{{ supercharger?.nomStation }}</p>
+    <h3>{{ supercharger?.nomStation }}</h3>
     <p>{{ supercharger?.adresseStation }}</p>
-    <p>{{ supercharger?.tarification}} km</p>
+    <p>{{ supercharger?.tarification}}</p>
   </div>
 </template>
 
@@ -42,8 +42,13 @@ h2 {
   font-weight: 500;
   margin: 0;
 }
-p {
+h3 {
   font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+p {
+  font-size: 0.9rem;
   margin: 0;
 }
 </style>
