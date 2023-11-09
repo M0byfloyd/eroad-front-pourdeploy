@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {LIcon, LMarker} from "@vue-leaflet/vue-leaflet";
+import { LIcon, LMarker } from "@vue-leaflet/vue-leaflet";
 
 // à typer
 const props = defineProps({

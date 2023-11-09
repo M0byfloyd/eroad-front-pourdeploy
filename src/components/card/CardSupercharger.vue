@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, defineProps } from 'vue';
+import { onMounted } from 'vue';
 import type { Supercharger } from '@/stores/types';
 
 const props = defineProps({
