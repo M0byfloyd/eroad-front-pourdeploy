@@ -2,7 +2,7 @@ import axios, { type AxiosInstance } from 'axios'
 import type { InjectionKey } from 'vue'
 
 const instance: AxiosInstance = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: 'https://eroad-back.netlify.app/',
   timeout: 5000,
   headers: {
     'Content-Type': 'application/json'
